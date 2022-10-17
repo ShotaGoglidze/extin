@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(fonts/bpg_glaho.ttf);
+    font-family: fonti;
+}
+
+body {
+    background-color: #1E1E1E;
+}
+
+
+/* მენიუ და ლოგო */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 60px;
+}
+
+.title h1 {
+    color: white;
+    font-family: fonti;
+    cursor: pointer;
+}
+
+.title a {
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    cursor: pointer;
+    z-index: 2000000;
+    box-sizing: border-box;
+}
+
+
+.menu div {
+    background-color: white;
+    width: 40px;
+    height: 2px;
+    transition: 0.3s;
+}
+
+/* .menu-line1, .menu-line3 {
+    transition: 1s;
+} */
+
+
+
+/* აღწერა */
+.description {
+    padding: 70px 60px;
+}
+
+.description h1 {
+    color: white;
+    font-size: 40px;
+    font-family: fonti;
+}
+
+/* მთავარი – ფოტო */
+
+.main-img {
+    overflow: hidden;
+}
+
+.image {
+    height: 800px;
+    width: 100%;
+    margin-top: 130px;
+    margin-left: 200px;
+    transition: 2s;
+}
+
+/* ჩვენს შესახებ */
+
+.about {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-title {
+    color: white;
+    line-height: 180px;
+}
+
+.about-description {
+    color: white;
+    text-align: center;
+}
+
+/* ჩვენი პროექტები*/
+
+.projects {
+    margin-top: 150px;
+    height: 70vh;
+}
+
+.pro-title h1 {
+    color: white;
+    margin-left: 280px;
+}
+
+.projects-imgs {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 120px;
+    flex-wrap: wrap;
+}
+
+.library-img {
+    margin-top: -70px;
+}
+
+.card {
+    height: 250px;
+    width: 450px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card h3 {
+    color: white;
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    /* right: 250px; */
+    width: 100%;
+    /* background-color: black; */
+    right: -10000px;
+    background-color: rgba(0, 0, 0, 0.98);
+}
+
+nav ul {
+    position: absolute;
+    right: 250px;
+    top: 170px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    line-height: 120px;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+
+nav.active {
+    right: 0;
+    transition: 0.3s;
+}
+
+
+nav i {
+    color: yellow;
+    font-size: 40px;
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* contact page*/
+
+.contact {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 70px;;
+}
+
+.contact h1  {
+    color: white;
+}
+
+.map {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.map iframe {
+    width: 1000px;
+    height: 570px;
+}
+
+
+
+
+
+/* projects page */
+
+.ourProjects {
+    text-align: center;
+    color: white;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+    row-gap: 80px;
+    column-gap: 100px;
+}
+
+.project-card {
+    width: 550px;
+    height: 310px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-card h2 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+
+
+
+/* achievements page */
+
+.container {
+    display: flex;
+}
+
+.container img {
+    width: 100%;
+}
+
+.row.images {
+    width: 660px;
+    padding-left: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.row.text {
+    /* display: flex;
+    justify-content: center; */
+    width: 1200px;
+    /* flex-direction: column; */
+}
+
+.container .row h1, .container .row h2 {
+    text-align: center;
+}
+
+.container .row h1, .container .row span {
+    color: yellow;
+}
+
+.container .row .h2-1 {
+    color: white;
+    margin-top: 30px;
+}
+
+.h2-2 {
+    margin-top: 70px;
+    color: white;
+    line-height: 43px;
+    font-size: 30px;
+}
+
+
+
+
+
+/* responsive-page */
+
+@media (max-width: 1700px) {
+    .row.images {
+        width: 600px;
+    }
+    
+    .h2-2 {
+        margin-top: 70px;
+        color: white;
+        line-height: 43px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .h2-2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .container {
+        margin-top: 150px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .row.images {
+        width: 700px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .row.images {
+        margin-left: 200px;
+    }
+
+    .row.text {
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 1560px) {
+    /* home-page */
+    .card {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1410px) {
+    /* home-page */
+    .projects-imgs {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1299px) {
+    /* home-page */
+    .library-img {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    /* home-page */
+    .image {
+        height: 600px;
+    }
+
+    .map iframe {
+        width: 800px;
+        height: 570px;
+    }
+    
+}
+
+
+@media (max-width: 800px) {
+    /* home-page */
+    .image {
+        height: 450px;
+    }
+
+    .card {
+        width: 600px;
+        height: 320px;
+    }
+
+    .pro-title h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .map iframe {
+        width: 650px;
+        height: 570px;
+    }
+    
+}
+
+@media (max-width: 630px) {
+    /* home-page */
+    .image {
+        height: 350px;
+    }
+
+    .card {
+        width: 500px;
+        height: 270px;
+    }
+
+    nav ul {
+        right: 150px;
+    }
+
+    /*projects-page */ 
+    .project-card {
+        width: 450px;
+    }
+
+    .map iframe {
+        width: 450px;
+        height: 470px;
+    }
+    
+}
+
+@media (max-width: 510px) {
+    /* home-page */
+    .image {
+        height: 270px;
+    }
+
+    .card {
+        width: 400px;
+        height: 200px;
+    }
+
+    nav ul {
+        right: 110px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    /* home-page */
+    .card {
+        width: 320px;
+        height: 170px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .project-card {
+        width: 350px;
+        height: 200px;
+    }
+
+    .map iframe {
+        width: 350px;
+    }
+    
+}
+
+@media (max-width: 410px) {
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 42px;
+        line-height: 100px;
+    }
+
+    nav ul {
+        right: 70px; 
+    }
+}
+
+@media (max-width: 375px) {
+    .description h1 {
+        font-size: 31px;
+    }
+}
